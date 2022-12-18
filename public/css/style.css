@@ -1,0 +1,51 @@
+body{
+    background-color: #84b6f4;
+}
+
+.textMensaje {
+    margin: 0;
+    padding: 2%;
+    background-color: lavenderblush;
+    border-bottom-right-radius: 20px;
+}
+
+.containerText {
+    margin: 0;
+    height: 250px;
+    width: 400px;
+    overflow-y: auto;
+}
+
+.containerText::-webkit-scrollbar{
+    width: 3px;
+    height: 10px;
+}
+
+.containerText::-webkit-scrollbar-thumb{
+    background: rgb(0, 0, 0);
+    border-radius: 100px;
+}
+
+.contenedorChat {   
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 450px;
+    height: auto;
+}
+
+.envioText{
+    padding:0;
+}
+
+.envioText a {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 100px;
+    width: 10%;
+}
+
+.envioText textarea {
+    border-radius: 100px;
+    height: 40px;
+    width: 80%;
+}
