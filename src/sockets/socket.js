@@ -1,24 +1,25 @@
 import { io } from "../index.js"
 import { v4 as uuid } from "uuid";
 import { selectMensaje, insertMensaje } from '../database/database.js'
-const bcript = require('bcryptjs')
-const rondasDeSal = 10;
-
+import { encriptar} from "./encrypt.js";
 
 io.on('connection', (socket) => {
 
+    selectMensaje(socket);
 
-    selectMensaje();
+    socket.on('cliente:new-menssage', (data) => {
 
-    socket.on('cliente:new-menssage', async (data) => {
+        const dataEncriptada = [encriptar(data)];
         const mensaje = {
             id_mensaje: uuid(),
-            mensaje: await bcript.hash(data, rondasDeSal)
+            mensaje: data
         }
-        insertMensaje(mensaje);
-        console.log(mensaje);
-        io.emit('server:menssages', data)
+        const smsEncriptado = {
+            id_mensaje: uuid(),
+            iv: dataEncriptada[0].iv,
+            mensaje: dataEncriptada[0].mensaje
+        }
+        insertMensaje(smsEncriptado);
+        io.emit('server:menssages', mensaje)
     })
-
-
 });

@@ -14,8 +14,8 @@ const insertMensaje = (data) =>{
     createMensaje(connection,data);
 }
 
-const selectMensaje = () =>{
-    readMensaje(connection);
+const selectMensaje = (io) =>{
+    readMensaje(connection,io);
 }
 
 module.exports = {
