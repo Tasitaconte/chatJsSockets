@@ -7,10 +7,10 @@ const puerto = 3000;
 app.set('port', process.env.PORT || puerto);
 
 // static files
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // server start
-const server = app.listen(app.get('port'))
+const server = app.listen(app.get('port'));
 
 // web socket
 const socketIO = require('socket.io');

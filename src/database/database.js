@@ -1,5 +1,5 @@
 import mysql from 'mysql';
-import {readMensaje,createMensaje} from './db_querys.js'
+import {readMensaje,createMensaje} from './db_querys.js';
 require("dotenv").config();
 
 const connection = mysql.createConnection({
@@ -8,7 +8,6 @@ const connection = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 })
-
 
 const insertMensaje = (data) =>{
     createMensaje(connection,data);
@@ -19,7 +18,6 @@ const selectMensaje = (io) =>{
 }
 
 module.exports = {
-    // conexion: con,
     insertMensaje,
     selectMensaje
 }

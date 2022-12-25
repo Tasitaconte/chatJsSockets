@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #84b6f4;
 }
 
@@ -16,25 +16,25 @@ body{
     overflow-y: auto;
 }
 
-.containerText::-webkit-scrollbar{
+.containerText::-webkit-scrollbar {
     width: 3px;
     height: 10px;
 }
 
-.containerText::-webkit-scrollbar-thumb{
+.containerText::-webkit-scrollbar-thumb {
     background: rgb(0, 0, 0);
     border-radius: 100px;
 }
 
-.contenedorChat {   
+.contenedorChat {
     margin-top: 4%;
     margin-bottom: 4%;
     width: 450px;
     height: auto;
 }
 
-.envioText{
-    padding:0;
+.envioText {
+    padding: 0;
 }
 
 .envioText a {

@@ -12,10 +12,7 @@ const smsUI = (text) => {
 const renderSms = (text) => {
     infoContainer.innerHTML = "";
     text.forEach(sms => {
-        infoContainer.append(smsUI(sms))
+        infoContainer.append(smsUI(sms));
     });
-}
-
-const appendSms = (text) => {
-    infoContainer.append(smsUI(text))
+    $("#textContenedor").animate({ scrollTop: $('#textContenedor')[0].scrollHeight }, 1000);
 }
