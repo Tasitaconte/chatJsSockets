@@ -18,17 +18,22 @@
         <div id="textContenedor" class="mx-auto containerText">
         </div>
         <br>
+
         <div id="envioText" class="envioText container mx-auto row">
-            <textarea class="col" name="mensajeText" placeholder="Escribe un mensaje" id="textChat"></textarea>
-            <a href="#" class="btn btn-primary" onclick="getData()">
+            <textarea class="col rounded-0" name="mensajeText" placeholder="Escribe un mensaje" id="textChat"></textarea>
+            <a id="pushMensaje" class="btn btn-primary rounded-5">
                 <i class="fa-regular fa-paper-plane"></i>
             </a>
         </div>
         <br>
     </div>
-  <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/cliente.js"></script>
+    <script src="./js/ui.js"></script>
     <script src="./js/app.js"></script>
     <script src="https://kit.fontawesome.com/d7d591b559.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
